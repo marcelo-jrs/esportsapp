@@ -224,8 +224,8 @@ return $default(_that.id,_that.slug,_that.startDate,_that.endDate,_that.league);
 /// @nodoc
 @JsonSerializable()
 
-class _TournamentsModel implements TournamentsModel {
-   _TournamentsModel({required this.id, required this.slug, required this.startDate, required this.endDate, this.league});
+class _TournamentsModel extends TournamentsModel {
+   _TournamentsModel({required this.id, required this.slug, required this.startDate, required this.endDate, this.league}): super._();
   factory _TournamentsModel.fromJson(Map<String, dynamic> json) => _$TournamentsModelFromJson(json);
 
 @override final  String id;

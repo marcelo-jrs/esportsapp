@@ -27,8 +27,8 @@ class MyApp extends ConsumerWidget {
     return MaterialApp(
       navigatorKey: getIt<NavigationService>().navigatorKey,
       debugShowCheckedModeBanner: false,
-      title: 'Movies App',
-      theme: themeState == ThemeEnums.dark ? MyThemeData.darktTheme : MyThemeData.lightTheme,
+      title: 'Esports App',
+      theme: themeState == ThemeEnums.dark ? MyThemeData.darkTheme : MyThemeData.lightTheme,
       home: const SplashScreen(),
     );
   }

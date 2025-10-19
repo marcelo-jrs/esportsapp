@@ -15,7 +15,7 @@ class MatchWidget extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final team1 = matchModel.teams[0];
     final team2 = matchModel.teams[1];
-    final isCompleted = matchModel.state == "completed";
+    final isCompleted = team1.result?.outcome == "win" || team1.result?.outcome == "loss";
 
     return Padding(
       padding: const EdgeInsets.all(8.0),

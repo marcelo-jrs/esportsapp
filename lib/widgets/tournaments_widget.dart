@@ -51,19 +51,19 @@ class TournamentsWidget extends ConsumerWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          tournamentModel.slug,
+                          tournamentModel.formattedName,
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                         SizedBox(height: 10),
                         Text(
-                          "Start date: ${tournamentModel.startDate}",
+                          "Start: ${_formatDate(tournamentModel.startDate)}",
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                         SizedBox(height: 10),
                         Text(
-                          "End date: ${tournamentModel.endDate}",
+                          "End: ${_formatDate(tournamentModel.endDate)}",
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
@@ -77,5 +77,13 @@ class TournamentsWidget extends ConsumerWidget {
         ),
       ),
     );
+  }
+
+  String _formatDate(String date) {
+    final parts = date.split('-');
+    if (parts.length == 3) {
+      return '${parts[2]}/${parts[1]}/${parts[0]}';
+    }
+    return date;
   }
 }

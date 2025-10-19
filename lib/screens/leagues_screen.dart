@@ -20,15 +20,6 @@ class LeaguesScreen extends ConsumerWidget {
         title: const Text("Leagues"),
         actions: [
           IconButton(
-            onPressed: () {
-              // TODO
-            },
-            icon: const Icon(
-              MyAppIcons.favoriteRounded,
-              color: Colors.red,
-            ),
-          ),
-          IconButton(
             onPressed: () async {
               await ref.read(themeProvider.notifier).toggleTheme();
             },

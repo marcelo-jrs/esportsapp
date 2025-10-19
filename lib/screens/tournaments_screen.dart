@@ -22,17 +22,8 @@ class TournamentsScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Leagues"),
+        title: const Text("Tournaments"),
         actions: [
-          IconButton(
-            onPressed: () {
-              // TODO
-            },
-            icon: const Icon(
-              MyAppIcons.favoriteRounded,
-              color: Colors.red,
-            ),
-          ),
           IconButton(
             onPressed: () async {
               await ref.read(themeProvider.notifier).toggleTheme();
